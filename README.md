@@ -30,7 +30,7 @@ Then edit the variable `MIRROR` accordingly and execute:
 
 ### Script
 
-We saved the above commands in the file `acquire_iso.sh`. You can execute it with
+We saved the above commands in the file `acquire_iso.sh`. We can execute it with
 
     bash acquire_iso.sh
 
@@ -64,14 +64,14 @@ The following commands check the b2sum, download the release signing key, and ve
     sq wkd get pierre@archlinux.de > release-key.pgp
     sq verify --signer-cert release-key.pgp --detached archlinux-x86_64.iso.sig archlinux-x86_64.iso
 
-We will get an error message corresponding to files that we did not download. Ignore these messages. The relevant output lines are following:
+We will get an error message corresponding to the files that we did not download. Ignore these messages. The relevant output lines are the following:
 
     archlinux-x86_64.iso: OK
     1 good signature.
 
 ### Script
 
-We saved the above commands in the file `verify_iso.sh`. You can execute it with
+We saved the above commands in the file `verify_iso.sh`. We can execute it with
 
     chmod +x verify_iso.sh
     ./verify_iso.sh
