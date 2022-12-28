@@ -100,7 +100,10 @@ The above command has to be executed as superuser.
 
 ### Script
 
-`prepare_usb.sh`
+We wrote the above commands in the file `prepare_usb.sh`. We can execute it with
+
+    chmod +x prepare_usb.sh
+    sudo ./prepare_usb.sh
 
 ### References
 
