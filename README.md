@@ -85,3 +85,26 @@ or
 - <https://wiki.archlinux.org/title/Installation_guide#Verify_signature>
 - <https://docs.sequoia-pgp.org/sq/>
 - <https://man.archlinux.org/man/b2sum.1>
+
+## Prepare an installation medium
+
+Find out the name of your USB drive with `lsblk`. Edit the variable `USBDRIVE` accordingly.
+
+Make sure that the drive is not mounted.
+Copy the ISO file to the USB drive using `dd`:
+
+    USBDRIVE="/dev/sdb"
+    dd bs=4M if=archlinux-x86_64.iso of=$USBDRIVE conv=fsync oflag=direct status=progress
+
+The above command has to be executed as superuser.
+
+### Script
+
+`prepare_usb.sh`
+
+### References
+
+- <https://wiki.archlinux.org/title/Installation_guide#Prepare_an_installation_medium>
+- <https://wiki.archlinux.org/title/USB_flash_installation_medium>
+- <https://man.archlinux.org/man/lsblk.8>
+- <https://man.archlinux.org/man/dd.1>
